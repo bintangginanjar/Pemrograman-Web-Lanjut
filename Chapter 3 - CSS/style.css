@@ -1,0 +1,56 @@
+.wrap {
+	background: blue;
+	width: 900px;
+	margin: 10px auto;
+}
+
+/* header */
+.wrap .header {
+	background: green;
+	padding: 2px 10px;
+}
+
+/* menu */
+.wrap .menu {
+	background: yellow;
+}
+
+.wrap .menu ul {
+	padding: 0;
+	margin: 0;
+	background: yellow;
+	overflow: hidden;
+}
+
+.wrap .menu ul li {
+	float: left;
+	list-style-type: none;
+	padding: 10px;
+}
+
+.badan {
+	height: 450px;
+}
+
+.wrap .badan .sidebar {
+	background: orange;
+	float: left;
+	width: 25%;
+	height: 100%
+}
+
+.wrap .badan .content {
+	background: red;
+	float: right;
+	height: 100%;
+	width: 75%;
+}
+
+.clear {
+	clear: both;
+}
+
+.wrap .footer {	
+	width: 100%;
+	padding: 2px;
+}
