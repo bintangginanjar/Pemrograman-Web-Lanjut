@@ -1,23 +1,32 @@
 .wrap {
-	background: blue;
-	width: 900px;
+	background-color: green;
+	width: 1024px;
 	margin: 10px auto;
+	font-family: "Arial";
 }
 
 /* header */
 .wrap .header {
-	background: green;
+	background: orange;
 	padding: 2px 10px;
+	color: #212f3c;
 }
 
-/* menu */
+.wrap .header p {
+	font-weight: bold;	
+}
+
+.wrap .header h1 {
+	font-style: italic;
+}
+
 .wrap .menu {
 	background: yellow;
 }
 
 .wrap .menu ul {
 	padding: 0;
-	margin: 0;
+	margin: 0px;
 	background: yellow;
 	overflow: hidden;
 }
@@ -25,32 +34,35 @@
 .wrap .menu ul li {
 	float: left;
 	list-style-type: none;
-	padding: 10px;
+	padding: 5px;
+	font-weight: bold;	
 }
 
-.badan {
-	height: 450px;
+.wrap .body {
+	height: 400px;
 }
 
-.wrap .badan .sidebar {
-	background: orange;
-	float: left;
-	width: 25%;
-	height: 100%
+.wrap .body .sidebar {
+	background: gray;
+	float: left;	
+	height: 100%;
+	width: 25%;	
+	font-weight: bold;	
 }
 
-.wrap .badan .content {
+.wrap .body .content {
 	background: red;
 	float: right;
 	height: 100%;
 	width: 75%;
+	font-size: 24px;
+	text-indent: 20px;
 }
 
-.clear {
-	clear: both;
-}
-
-.wrap .footer {	
-	width: 100%;
+.wrap .footer {
+	width: 100%;	
 	padding: 2px;
+	font-size: 16px;
+	text-indent: 20px;
+	font-weight: bold;	
 }
