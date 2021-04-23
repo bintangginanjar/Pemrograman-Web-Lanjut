@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Chapter 5 - HTML DOM</title>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td>
+					<table border="1">
+						<tr>
+							<td>
+								Contoh Document Object
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p><h5>Akses elemen DOM Sederhana</h5></p>
+								<p id = "contoh">
+									Contoh DOM
+								</p>
+								<script type="text/javascript">
+									x = document.getElementById("contoh");
+									dom = x.firstChild().nodeValue;
+									document.write(dom);
+								</script>			
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p><h5>Contoh Document Object Collections</h5></p>
+								<form name="form1"></form>
+								<form name="form2"></form>
+								<form name="form3"></form>
+								<script type="text/javascript">
+									document.write("Jumlah form: " + document.forms.length + "<br>");
+									//x = document.forms.length;
+
+									for (var i = 0; i <= document.forms.length; i++) {
+										var counter = i+1
+										document.write("Form ke " + counter + " adalah " + document.forms[i].name + "<br>");
+									}
+								</script>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p><h5>Contoh Document Object Properties</h5></p>
+								<script type="text/javascript">
+									document.write(document.title);
+								</script>			
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p><h5>Contoh Document Object Methods</h5></p>
+								<div id = "pesan"></div>
+								<button onclick=tampilPesan()>Tampilkan pesan</button>
+								<script type="text/javascript">
+									function tampilPesan() {
+										var pesan = document.getElementById("pesan");
+										pesan.innerHTML = "<h5>Hello studens</h5>"
+									}			
+								</script>			
+							</td>
+						</tr>
+					</table>			
+				</td>
+				<td>
+					<table border="1">
+						<tr>
+							<td>
+								Contoh Event Object
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<script type="text/javascript">
+									function tampilKota(propinsi) {
+										var kota = "";
+
+										if (propinsi == "Jabar") {
+											kota = "<ul> \
+														<li>Bandung</li> \
+														<li>Bogor</li> \
+														<li>Cianjur</li> \
+														<li>Sukabumi</li> \
+													</ul>";
+										}
+
+										if (propinsi == "Jateng") {
+											kota = "<ul> \
+														<li>Semarang</li> \
+														<li>Yogyakarta</li> \
+														<li>Solo</li> \
+														<li>Kudus</li> \
+													</ul>";
+										}
+
+										document.getElementById("kota").innerHTML = kota;
+									}
+								</script>
+								<form>
+									<select name="propinsi" onchange=tampilKota(this.value)>
+										<option value = ""></option>
+										<option value = "Jabar">Jabar</option>
+										<option value = "Jateng">Jateng</option>
+									</select>
+								</form>
+								<div id="kota"></div>
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td>
+					<table border="1">
+						<tr>
+							<td>								
+								Contoh HTML Element Object
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div id="teksPesan">
+									<h3>Hello world</h3>
+								</div>
+								<button id="buttonWarna" onclick=gantiWarna()>Hijau</button>
+								<script type="text/javascript">
+									function gantiWarna() {										
+										var teksPesan = document.getElementById("teksPesan");
+										var buttonWarna = document.getElementById("buttonWarna");
+
+										if (buttonWarna.innerHTML == "Hijau") {
+											//alert("Hijau")
+											teksPesan.style.cssText = "background-color: green;";
+											buttonWarna.innerHTML = "Merah";
+										} else if (buttonWarna.innerHTML == "Merah") {
+											teksPesan.style.cssText = "background-color: red;";
+											buttonWarna.innerHTML = "Hijau";
+										}
+									}
+								</script>								
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		
+	</body>
+</html>
